@@ -1,0 +1,21 @@
+PODS:
+  - AMapFoundation (1.4.0)
+  - AMapSearch (5.0.0):
+    - AMapFoundation (~> 1.2)
+  - IQKeyboardManager (3.3.7)
+  - MJRefresh (3.1.12)
+
+DEPENDENCIES:
+  - AMapSearch
+  - IQKeyboardManager
+  - MJRefresh
+
+SPEC CHECKSUMS:
+  AMapFoundation: 458974f46a39df8407fd818ab83d2630d494c726
+  AMapSearch: cf7fd100d533995822d92c22586abfaf7cdf6eef
+  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+
+PODFILE CHECKSUM: 78ba97bace4681ca861e834b36229ae7605ef667
+
+COCOAPODS: 1.2.1

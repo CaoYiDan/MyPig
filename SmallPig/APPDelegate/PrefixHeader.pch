@@ -1,0 +1,75 @@
+//
+//  PrefixHeader.pch
+//  SmallPig
+//
+//  Created by 李智帅 on 2017/5/31.
+//  Copyright © 2017年 李智帅. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+//一. 全局的头文件
+#import "SPApi.h"
+#import "Notification.h"
+#import "MJExtension.h"
+#import "NSObject+Block.h"
+#import "MBProgressHUD.h"
+#import "AFNetworking.h"//网络请求
+#import "UIKit+AFNetworking.h"
+#import "SDImageCache.h"
+#import "StorageUtil.h"
+#import "UIImageView+WebCache.h"//给Imageview加图片
+#import "UIViewController+SPViewController.h"
+#import "FactoryUI.h"
+#import "SDCycleScrollView.h"
+#import "MJRefresh.h"//刷新
+#import "iToast.h"
+#import "Constant.h"
+#import "Masonry.h"
+#import "UIView+SCFrame.h"
+//图片标签位置
+#import "LabelAndImage.h"
+#import "NSObject+propertyCode.h"
+//#import "SPKeyBordCoverView.h"
+//森哥
+#import "HttpRequest.h"
+//字体
+#define Font(x) [UIFont systemFontOfSize:x]
+
+//颜色
+#define WC [UIColor whiteColor]
+//标题颜色
+#define TitleColor [UIColor colorWithRed:46/255.0 green:46/255.0 blue:46/255.0 alpha:1]
+#define MAINCOLOR [UIColor colorWithRed:0.93 green:0.93 blue:0.93 alpha:1];
+#define AlphaBack  [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6]
+//进度条
+#define KProgressColor [UIColor colorWithRed:0/255.0 green:191/255.0 blue:255/255.0 alpha:1]
+//空集
+#define isNull(x) (!x || [x isKindOfClass:[NSNull class]])
+
+#define isEmptyString(x) (isNull(x) || [x isEqual:@""] || [x isEqual:@"(null)"])
+
+//wekself 防止死循环
+#define WeakSelf __weak typeof(self) weakSelf = self;
+
+//屏幕坐标
+#define SCREEN_W [UIScreen mainScreen].bounds.size.width
+#define SCREEN_H ([UIScreen mainScreen].bounds.size.height-64)
+#define SCREEN_B [UIScreen mainScreen].bounds
+#define SCREEN_H2 [UIScreen mainScreen].bounds.size.height
+//提示语 Toast
+#define Toast(msg) [[[iToast makeText:(msg)] setGravity:iToastGravityCenter]                      show]
+
+////测试Base接口
+//#define BaseTextUrl @"http://192.168.1.227:8080"
+//#define BaseUrl @""
+
+
+
+#endif
+#endif /* PrefixHeader_pch */
